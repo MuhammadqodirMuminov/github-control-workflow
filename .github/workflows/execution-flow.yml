@@ -75,3 +75,10 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wrong report step
+        run: |
+          echo "samethink went wrong."
+          echo "${{toJson(github)}}"
